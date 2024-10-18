@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spring Bread</title>
+
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>Random Move and Stop Div</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-image: url('')
+        }
+        #movingDiv {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.9.2/core.css">
+
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.9.2/core.js"></script>
+</head>
+<body>
+    <H1>CATCH ME IF YOU CAN</H1>
+    <H6>Click the square to win points</H6>
+    <h1>POINTS</h1>
+    <p id="item">1</p>
+    <button id="movingDiv"></button>
+
+<script type="py"  config="./pyscript.toml">
+from pyscript import when,document
+from pyscript import display
+@when("click", "#movingDiv")
+def fun(event):
+    q = document.querySelector("#item")
+    q.innerText = (int(q.innerText)) + 1
+</script>
+    <script src=./main.js>
+    </script>
+</body>
+</html>
